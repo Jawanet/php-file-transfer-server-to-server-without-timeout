@@ -10,7 +10,7 @@ if($file) {
 	$newf = fopen ($newfname, "wb");
 	if($newf)
 		while(!feof($file)) {
-			fwrite($newf, fread($file, 1024 * 8 ), 1024 * 8 );
+			fwrite($newf, fread($file, 4096 * 8 ), 4096 * 8 );
 			echo '1 MB File Chunk Written!<br>';
 		}
 }
